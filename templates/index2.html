@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Enter New Event!</h1>
+
+<div class="form-container">
+  <form action="/events" method="post">
+    <div id="event-date">
+      <label or="date">Date of Event</label>
+      <input type="text" name="date" id="date" />
+    </div>
+    <div id="event-name">
+      <label for="name">Name of Event</label>
+      <input type="text" name="name" id="name" />
+    </div>
+    <div id="guest-number">
+      <label for="num_guests">Number of Guests</label>
+      <input type="text" name="num_guests" id="num_guests" />
+    </div>
+    <div id="location">
+      <label for="location">Location of Event</label>
+      <input type="text" name="location" id="location" />
+    </div>
+    <div id="description">
+      <label for="description">Description</label>
+      <textarea
+        name="description"
+        id="description"
+        cols="10"
+        rows="10"
+      ></textarea>
+    </div>
+    <div id="submit-button">
+      <input type="submit" value="Add Event" />
+    </div>
+  </form>
+</div>
+
+{% endblock content%}

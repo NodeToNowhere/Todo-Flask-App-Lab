@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+<!-- establishes the inheritance link bw the two templates -->
+{% block content %}
+
+<h1>Current Events</h1>
+{% for event in events %}
+<div>
+  <p>
+    <b>Event Date:</b> {{ event.date }}<br />
+    <b>Event Name: </b> {{ event.name_event }}<br />
+    <b>Number of Guests: </b>{{ event.number_guests }}<br />
+    <b>Location:</b> {{event.room_location }}<br />
+    <b>Description:</b> {{ event.description }}<br />
+  </p>
+</div>
+
+{% endfor %} {% endblock content%}
